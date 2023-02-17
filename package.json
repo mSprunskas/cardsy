@@ -1,0 +1,19 @@
+{
+  "name": "cardsy",
+  "version": "0.0.1",
+  "description": "Loyalty card manager app",
+  "repository": "https://github.com/mSprunskas/cardsy",
+  "main": "index.js",
+  "scripts": {
+    "publish": "git subtree push --prefix dist origin gh-pages"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  }
+}

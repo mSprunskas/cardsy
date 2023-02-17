@@ -1,0 +1,15 @@
+{
+  "background_color": "purple",
+  "description": "Manager loyalty cards.",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "images/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "name": "Loyalty card manager",
+  "short_name": "Cardsy",
+  "start_url": "/pwa-examples/a2hs/index.html"
+}
