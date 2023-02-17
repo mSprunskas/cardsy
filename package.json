@@ -1,6 +1,6 @@
 {
   "name": "cardsy",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Loyalty card manager app",
   "repository": "https://github.com/mSprunskas/cardsy",
   "main": "index.js",
