@@ -11,5 +11,5 @@
   ],
   "name": "Loyalty card manager",
   "short_name": "Cardsy",
-  "start_url": "/pwa-examples/a2hs/index.html"
+  "start_url": "/cardsy/index.html"
 }
