@@ -3,11 +3,7 @@
 if ('serviceWorker' in navigator) {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-        .register('/cardsy/sw.js')
-        .then(() => { console.log('Service Worker Registered'); });
-
-    navigator.serviceWorker
-        .register('/sw.js')
+        .register('/cardsy/sw.js') // TODO: fix prod url
         .then(() => { console.log('Service Worker Registered'); });
   }
 }
