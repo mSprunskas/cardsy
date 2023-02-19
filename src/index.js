@@ -1,12 +1,20 @@
-import registerServiceWorker from '@/js/registerServiceWorker';
+// import registerServiceWorker from '@/js/registerServiceWorker';
 import getBarcode from '@/js/barcode';
 
 // Test import of styles
 import '@/styles/index.scss';
 
-const app = document.querySelector('#root');
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').then(registration => {
+            console.log('SW registered: ', registration);
+        }).catch(error => {
+            console.log('SW registration failed: ', error);
+        });
+    });
+}
 
-// registerServiceWorker();
+const app = document.querySelector('#root');
 
 document.addEventListener(
     "DOMContentLoaded",
