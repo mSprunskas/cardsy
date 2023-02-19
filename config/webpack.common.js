@@ -1,7 +1,7 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { WorkboxPlugin } = require('workbox-webpack-plugin');
+// const { WorkboxPlugin } = require('workbox-webpack-plugin');
 
 const paths = require('./paths');
 
@@ -20,12 +20,12 @@ module.exports = {
     // Removes/cleans build folders and unused assets when rebuilding
     new CleanWebpackPlugin(),
 
-    new WorkboxPlugin({
-      globDirectory: './dist/',
-      globPatterns: ['**/*.{html,js,css}'],
-      swSrc: './src/service-worker.js',
-      swDest: './dist/sw.js'
-    }),
+    // new WorkboxPlugin({
+    //   globDirectory: './dist/',
+    //   globPatterns: ['**/*.{html,js,css}'],
+    //   swSrc: './src/service-worker.js',
+    //   swDest: './dist/sw.js'
+    // }),
 
     // Copies files from target to destination folder
     new CopyWebpackPlugin({
