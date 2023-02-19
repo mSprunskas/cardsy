@@ -1,22 +1,3 @@
-// self.addEventListener('install', (e) => {
-//   e.waitUntil(
-//     caches.open('cardsy-store').then((cache) => cache.addAll([
-//       '/',
-//       '/index.html',
-//       '/index.js',
-//       '/style.css',
-//       '/images/pet24.png',
-//     ])),
-//   );
-// });
-//
-// self.addEventListener('fetch', (e) => {
-//   console.log(e.request.url);
-//   e.respondWith(
-//     caches.match(e.request).then((response) => response || fetch(e.request)),
-//   );
-// });
-
 const addResourcesToCache = async (resources) => {
     const cache = await caches.open('v1');
     await cache.addAll(resources);
@@ -79,12 +60,11 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('install', (event) => {
     event.waitUntil(
         addResourcesToCache([
-          './',
-          './index.html',
-          './index.js',
-          './style.css',
-          './images/pet24.png',
-          './images/fallback.png',
+            './',
+            './index.html',
+            './bundle.js',
+            './style.css',
+            './public/images/fallback.png',
         ])
     );
 });
@@ -94,7 +74,7 @@ self.addEventListener('fetch', (event) => {
         cacheFirst({
             request: event.request,
             preloadResponsePromise: event.preloadResponse,
-            fallbackUrl: './images/fallback.png',
+            fallbackUrl: './public/images/fallback.png',
         })
     );
 });
